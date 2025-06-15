@@ -6,6 +6,20 @@ tags: []
 
 # writing_gleam
 
+---
+
+[LLM Chat](https://github.com/copilot/c/80ddd78a-544f-43f9-9b81-140dd246b37c)
+
+---
+
+## TODOs
+
+- [ ] Finish the Interactive Language Tour
+- [ ] Finish `writing_gleam` on my Local Machine
+- [ ] Deploy to a Linux Server
+
+## Why?
+
 - `Gleam` is a statically typed, functional language that compiles to `Erlang` and
   `JavaScript`. It's quite new (roughly one year old at the time of writing: `v1.11.1`).
   It drew me in mainly because of its compiler (which reminds me of `Elm` and `Rust`),
@@ -27,6 +41,8 @@ gleam test  # Run the tests
 [Installing `Gleam`](https://gleam.run/getting-started/installing/)
 
 [Interactive `Gleam` Language Tour](https://tour.gleam.run/)
+
+[Interactive `Gleam` Language Tour, in One Page](https://tour.gleam.run/everything/)
 
 [This Project Online](https://gleam.run/writing-gleam/)
 
