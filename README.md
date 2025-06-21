@@ -51,3 +51,13 @@ gleam test  # Run the tests
 [More `Gleam` Docs](https://gleam.run/documentation/#deployment)
 
 ---
+
+## Concepts I still don't quite get
+
+- [ ] [Tail Calls](https://tour.gleam.run/everything/#flow-control-tail-calls)
+
+- [ ] [List Recursion](https://tour.gleam.run/everything/#flow-control-list-recursion)
+
+- [ ] [Pattern Aliases](https://tour.gleam.run/everything/#flow-control-pattern-aliases)
+
+---
