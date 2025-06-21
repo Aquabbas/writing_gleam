@@ -1,17 +1,27 @@
-// ------------
-// Next Module:
-// ------------------------------------------------------
-// https://tour.gleam.run/everything/#functions-functions
-// ------------------------------------------------------
+//// --------------------------------------------
+//// This Module is for the `Gleam Language Tour`
+//// --------------------------------------------
 
-const int_list: List(Int) = [1, 2, 3]
+// https://github.com/gleam-lang/gleam/discussions/4704
 
-const float_list: List(Float) = [1.1, 2.2, 3.3]
+// -------------
+// Next Chapter:
+// ----------------------------------------------------------------
+// https://tour.gleam.run/everything/#flow-control-case-expressions
+// -----------------------------------------------------------------
+// https://github.com/copilot/c/2eca2d46-a75d-443f-944e-b8795a10e9ee
+// -----------------------------------------------------------------
 
 pub fn main() {
-  echo int_list
-  echo int_list == [1, 2, 3]
+  echo old_function_name()
+  echo new_function_name()
+}
 
-  echo float_list
-  echo float_list == [1.1, 2.2, 3.3]
+@deprecated("Use new_function_name instead!")
+fn old_function_name() -> Nil {
+  Nil
+}
+
+fn new_function_name() -> Nil {
+  Nil
 }
