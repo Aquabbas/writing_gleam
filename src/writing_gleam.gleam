@@ -4,22 +4,25 @@
 ////
 //// -------------
 //// Next Chapter:
-//// ----------------------------------------------------------------------------
-//// https://tour.gleam.run/everything/#standard-library-standard-library-package
-//// ----------------------------------------------------------------------------
+//// --------------------------------
+//// https://gleam.run/writing-gleam/
+//// -----------------------------------------------------------------
 //// https://github.com/copilot/c/2eca2d46-a75d-443f-944e-b8795a10e9ee
 //// -----------------------------------------------------------------
 
-import gleam/option.{type Option, None, Some}
+@external(erlang, "lists", "reverse")
+pub fn reverse_list(items: List(e)) -> List(e) {
+  tail_recursive_reverse(items, [])
+}
 
-pub type Person {
-
-  Person(name: String, pet: Option(String))
+fn tail_recursive_reverse(items: List(e), reversed: List(e)) -> List(e) {
+  case items {
+    [] -> reversed
+    [first, ..rest] -> tail_recursive_reverse(rest, [first, ..reversed])
+  }
 }
 
 pub fn main() {
-  let person_with_pet = Person("Al", Some("Nubi"))
-  let person_without_pet = Person("Maria", None)
-
-  echo [person_with_pet, person_without_pet]
+  echo reverse_list([1, 2, 3, 4, 5])
+  echo reverse_list(["a", "b", "c", "d", "e"])
 }

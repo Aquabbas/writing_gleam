@@ -14,7 +14,7 @@ tags: []
 
 ## TODOs
 
-- [ ] Finish the Interactive Language Tour
+- [x] Finish the Interactive Language Tour
 - [ ] Finish `writing_gleam` on my Local Machine
 - [ ] Deploy to a Linux Server
 
@@ -79,18 +79,47 @@ fn handle_fish(fish: Fish) {
 }
 ```
 
-**Note:** The `..` is called the `Spread Syntax` and is used to **"discard fields that are not required"**
+**Note:** The `..` is called the `Spread Syntax` and is used to **“”discard
+fields that are not required“”**
 
 ---
 
 What is `Linear Time` exactly, in Computer Science?
 
-What are other types of `Time` in Computer Science?
+What are other types of `Time`, in Computer Science?
 
 ---
 
 ## Extra Reading
 
 <https://hexdocs.pm/gleam_stdlib/gleam/string_tree.html#StringTree>
+
+---
+
+## Illustration of the `use` keyword
+
+The following two functions do basically the same thing, and the latter is WAY
+easier to read. I'm in love with `Gleam`.
+
+```Gleam
+pub fn without_use() -> Result(String, Nil) {
+  result.try(get_username(), fn(username) {
+    result.try(get_password(), fn(password) {
+      result.map(log_in(username, password), fn(greeting) {
+        greeting <> ", " <> username
+      })
+    })
+  })
+}
+
+pub fn with_use() -> Result(String, Nil) {
+  use username <- result.try(get_username())
+  use password <- result.try(get_password())
+  use greeting <- result.map(log_in(username, password))
+  { greeting <> ", " <> username }
+}
+```
+
+[Read more about `use` here](https://tour.gleam.run/everything/#advanced-features-use)
 
 ---
