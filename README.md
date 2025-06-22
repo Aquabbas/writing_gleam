@@ -61,3 +61,24 @@ gleam test  # Run the tests
 - [ ] [Pattern Aliases](https://tour.gleam.run/everything/#flow-control-pattern-aliases)
 
 ---
+
+I still don't understand what `..` means here for example:
+
+```Gleam
+fn handle_fish(fish: Fish) {
+  case fish {
+    Starfish(_, favourite_color) -> io.println(favourite_color)
+    Jellyfish(name, ..) -> io.println(name)
+  }
+}
+```
+
+**Note:** The `..` is called the `Spread Syntax` and is used to **"discard fields that are not required"**
+
+---
+
+## Extra Reading
+
+<https://hexdocs.pm/gleam_stdlib/gleam/string_tree.html#StringTree>
+
+---

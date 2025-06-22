@@ -11,16 +11,15 @@
 //// -----------------------------------------------------------------
 
 pub fn main() {
-  let numbers = [1, 2, 3, 4, 5]
+  // echo <<3>>
+  // echo <<3>> == <<3:size(8)>>
 
-  echo get_first_larger(numbers, 3)
-  echo get_first_larger(numbers, 5)
-}
+  // echo <<6147:size(16)>>
 
-fn get_first_larger(numbers: List(Int), limit: Int) -> Int {
-  case numbers {
-    [first, ..] if first > limit -> first
-    [_, ..rest] -> get_first_larger(rest, limit)
-    [] -> 0
-  }
+  // echo <<"Hello, Joe!":utf8>>
+
+  let first = <<4>>
+  let second = <<2>>
+
+  echo <<first:bits, second:bits>>
 }
