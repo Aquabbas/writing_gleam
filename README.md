@@ -50,6 +50,10 @@ gleam test  # Run the tests
 
 [More `Gleam` Docs](https://gleam.run/documentation/#deployment)
 
+[The `Hex` package repository, which includes the `Gleam` standard library](https://hex.pm/)
+
+<https://hexdocs.pm/gleam_stdlib/>
+
 ---
 
 ## Concepts I still don't quite get
@@ -59,6 +63,8 @@ gleam test  # Run the tests
 - [ ] [List Recursion](https://tour.gleam.run/everything/#flow-control-list-recursion)
 
 - [ ] [Pattern Aliases](https://tour.gleam.run/everything/#flow-control-pattern-aliases)
+
+- [ ] [Option Module](https://tour.gleam.run/everything/#standard-library-option-module)
 
 ---
 
@@ -74,6 +80,12 @@ fn handle_fish(fish: Fish) {
 ```
 
 **Note:** The `..` is called the `Spread Syntax` and is used to **"discard fields that are not required"**
+
+---
+
+What is `Linear Time` exactly, in Computer Science?
+
+What are other types of `Time` in Computer Science?
 
 ---
 

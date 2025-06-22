@@ -4,22 +4,22 @@
 ////
 //// -------------
 //// Next Chapter:
-//// ----------------------------------------------------
-//// https://tour.gleam.run/everything/#data-types-tuples
-//// -----------------------------------------------------------------
+//// ----------------------------------------------------------------------------
+//// https://tour.gleam.run/everything/#standard-library-standard-library-package
+//// ----------------------------------------------------------------------------
 //// https://github.com/copilot/c/2eca2d46-a75d-443f-944e-b8795a10e9ee
 //// -----------------------------------------------------------------
 
+import gleam/option.{type Option, None, Some}
+
+pub type Person {
+
+  Person(name: String, pet: Option(String))
+}
+
 pub fn main() {
-  // echo <<3>>
-  // echo <<3>> == <<3:size(8)>>
+  let person_with_pet = Person("Al", Some("Nubi"))
+  let person_without_pet = Person("Maria", None)
 
-  // echo <<6147:size(16)>>
-
-  // echo <<"Hello, Joe!":utf8>>
-
-  let first = <<4>>
-  let second = <<2>>
-
-  echo <<first:bits, second:bits>>
+  echo [person_with_pet, person_without_pet]
 }
